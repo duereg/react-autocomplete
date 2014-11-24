@@ -4,31 +4,53 @@
   "browserify": {
     "transform": [
       [
+        "reactify",
+        {
+          "es6": true
+        }
+      ],
+      [
         "browserify-shim",
-        {"global": true}
+        {
+          "global": true
+        }
       ],
       [
         "envify",
-        {"global": true}
+        {
+          "global": true
+        }
       ]
     ]
   },
   "browserify-shim": {
-    "react": "global:__ReactShim.React",
-    "react/lib/shallowEqual": "global:__ReactShim.shallowEqual",
-    "react/lib/cx": "global:__ReactShim.cx",
-    "react/lib/invariant": "global:__ReactShim.invariant",
-    "react/lib/merge": "global:__ReactShim.merge",
-    "react/lib/mergeInto": "global:__ReactShim.mergeInto",
-    "react/lib/ReactUpdates": "global:__ReactShim.ReactUpdates",
-    "react/lib/ExecutionEnvironment": "global:__ReactShim.ExecutionEnvironment",
-    "react/lib/emptyFunction": "global:__ReactShim.emptyFunction"
+    "react": "global:window.React",
+    "react/addons": "global:window.React"
+  },
+  "dependencies": {
+    "reactify": "^0.11.0",
+    "browserify-shim": "^3.7.0"
   },
   "devDependencies": {
-    "browserify": "^3.33.0",
+    "browserify": "^5.9.1",
     "browserify-shim": "^3.3.2",
     "derequire": "^0.8.0",
     "envify": "^1.2.1",
-    "uglify-js": "^2.4.13"
+    "uglify-js": "^2.4.13",
+    "eslint-jsx": "git+https://github.com/andreypopp/eslint#jsx",
+    "react": "^0.11.1",
+    "pretty-hrtime": "^0.2.1",
+    "gulp-changed": "^0.4.1",
+    "vinyl-source-stream": "^0.1.1",
+    "gulp-open": "^0.2.8",
+    "gulp-util": "^3.0.0",
+    "gulp-notify": "^1.4.1",
+    "gulp": "^3.8.7",
+    "gulp-jasmine": "^0.3.0",
+    "gulp-flatten": "0.0.2",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.3.4",
+    "gulp-uglify": "^1.0.1",
+    "gulp-less": "^1.3.6"
   }
 }

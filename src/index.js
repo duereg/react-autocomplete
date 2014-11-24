@@ -298,7 +298,8 @@ var Results = React.createClass({
   renderResult(result) {
     var focused = this.props.focusedValue &&
                   this.props.focusedValue.id === result.id;
-    return this.props.renderer({
+                  var renderer = this.props.renderer || Result;
+    return renderer({
       ref: focused ? "focused" : undefined,
       key: result.id,
       result: result,
