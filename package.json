@@ -50,5 +50,8 @@
   "bugs": {
     "url": "https://github.com/malonecj/react-autocomplete/issues"
   },
-  "homepage": "https://github.com/malonecj/react-autocomplete"
+  "homepage": "https://github.com/malonecj/react-autocomplete",
+  "dependencies": {
+    "reactify": "^0.17.1"
+  }
 }
